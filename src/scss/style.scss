@@ -105,7 +105,7 @@ input {
 
 .home {
    background-color: #f9f8fb;
-   background-image: url(../image/img-header.jpg);
+   background-image: url("@img/img-header.jpg");
    background-position: center center;
    background-repeat: no-repeat;
    background-size: cover;
@@ -301,19 +301,19 @@ input {
       }
 
       &--shopping::before {
-         background-image: url("../image/icon-shopping.svg");
+         background-image: url("@img/icon-shopping.svg");
       }
 
       &--product::before {
-         background-image: url("../image/icon-product.svg");
+         background-image: url("@img/icon-product.svg");
       }
 
       &--delivery::before {
-         background-image: url("../image/icon-delivery.svg");
+         background-image: url("@img/icon-delivery.svg");
       }
 
       &--organized::before {
-         background-image: url("../image/icon-organized.svg");
+         background-image: url("@img/icon-organized.svg");
       }
 
       &:focus {
@@ -335,7 +335,7 @@ input {
    }
 
    &__info {
-      background-image: url(../image/img-service.png);
+      background-image: url("@img/img-service.png");
       background-repeat: no-repeat;
       background-position: 100% 0%;
       background-size: contain;
@@ -428,7 +428,7 @@ input {
 }
 
 .section-subscribe-us {
-   background-image: url("../image/bg.png");
+   background-image: url("@img/bg.png");
    background-repeat: no-repeat;
    background-position: center center;
    padding: 130px 0 150px;
@@ -594,7 +594,7 @@ input {
 
 .section-contact {
    flex: 0 1 auto;
-   background-image: url("../image/bg-contact.png");
+   background-image: url("@img/bg-contact.png");
    background-position: center center;
    background-size: cover;
    padding: 90px 0 120px;
