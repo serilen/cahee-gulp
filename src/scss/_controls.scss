@@ -1,3 +1,9 @@
+a,
+button,
+input {
+   outline: none;
+}
+
 .btn {
    display: inline-flex;
    justify-content: center;
@@ -83,3 +89,42 @@
       }
    }
 }
+
+.btn-scroll {
+   display: block;
+   width: 24px;
+   height: 40px;
+   border: 2px solid #262626;
+   border-radius: 40%;
+   margin: auto;
+   box-shadow: 0 0 0 3px transparent;
+
+   &:before {
+      @include pseudo;
+      width: 3px;
+      height: 11px;
+      background-color: #000;
+      left: 50%;
+      transform: translate(-50%, 50%);
+   }
+
+   &:focus {
+      box-shadow: 0 0 0 3px rgba(#262626, 0.5);
+   }
+
+   &:hover {
+      opacity: 0.5;
+   }
+   &:active {
+      border-radius: 20%;
+   }
+}
+
+.form {
+   &__field {
+      padding: 17px;
+      font-size: 15px;
+   }
+}
+
+@import "_burger-btn";

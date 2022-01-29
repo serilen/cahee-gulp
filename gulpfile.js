@@ -18,23 +18,14 @@ global.app = {
 //Импортируем задачи 
 
 import { copy } from "./gulp/tasks/copy.js";
-gulp.task('copy', copy);
 import { reset } from "./gulp/tasks/reset.js";
-gulp.task('reset', reset);
 import { html } from "./gulp/tasks/html.js";
-gulp.task('html', html);
 import replace from "gulp-replace";
 import { server } from "./gulp/tasks/server.js";
 import { scss } from "./gulp/tasks/scss.js";
-gulp.task('scss', scss);
 import { js } from "./gulp/tasks/js.js";
-gulp.task('js', js);
 import { images } from "./gulp/tasks/images.js";
-gulp.task('images', images);
 import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";
-gulp.task('otfToTtf', otfToTtf);
-gulp.task('ttfToWoff', ttfToWoff);
-gulp.task('fontsStyle', fontsStyle);
 import { svgSprive } from "./gulp/tasks/svgSprive.js";
 
 
@@ -59,3 +50,13 @@ const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 
 // Выполнение сценариев по умолчанию
 gulp.task('default', dev);
+
+gulp.task('copy', copy);
+gulp.task('reset', reset);
+gulp.task('html', html);
+gulp.task('scss', scss);
+gulp.task('js', js);
+gulp.task('images', images);
+gulp.task('otfToTtf', otfToTtf);
+gulp.task('ttfToWoff', ttfToWoff);
+gulp.task('fontsStyle', fontsStyle);

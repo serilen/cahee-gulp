@@ -18,7 +18,6 @@ export const scss = () => {
             title: "SCSS",
             message: "Error: <%= error.message %>"
          })))
-      .pipe(app.plugins.replace(/@img\//g, '../img/'))
       .pipe(sass({
          outputStyle: 'expanded'
       }))
@@ -31,6 +30,7 @@ export const scss = () => {
          overrideBrowserslist: ["last 3 versions"],
          cascade: true
       }))
+      .pipe(app.plugins.replace(/@img\//g, '/img/'))
       .pipe(app.gulp.dest(app.path.build.css)) //Не сжатый файл css, если не надо, то убрать или закомитить 
       .pipe(cleanCss())
       .pipe(rename({
