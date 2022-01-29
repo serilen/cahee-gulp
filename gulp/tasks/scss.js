@@ -5,7 +5,10 @@ import rename from 'gulp-rename';
 import cleanCss from 'gulp-clean-css'; // Сжатие файла css
 import webpcss from 'gulp-webpcss'; // Вывод изображений Webp
 import autoprefixer from "gulp-autoprefixer"; //Добавление вендерных префиксов
-
+import yargs from 'yargs'
+import { hideBin } from 'yargs/helpers'
+import sourcemaps from 'gulp-sourcemaps';
+import gulpIf from 'gulp-if';
 
 const sass = gulpSass(dartSass);
 
@@ -18,6 +21,7 @@ export const scss = () => {
             title: "SCSS",
             message: "Error: <%= error.message %>"
          })))
+      .pipe(sourcemaps.init())
       .pipe(sass({
          outputStyle: 'expanded'
       }))
@@ -36,6 +40,7 @@ export const scss = () => {
       .pipe(rename({
          extname: ".min.css"
       }))
+      .pipe(sourcemaps.write())
       .pipe(app.gulp.dest(app.path.build.css))
       .pipe(app.plugins.browsersync.stream());
 }

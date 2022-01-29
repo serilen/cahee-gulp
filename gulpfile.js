@@ -48,8 +48,12 @@ const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images)
 //Построение сценариев выполнения задач (series - последовательно, parallel - паралельно)
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 
+const prod = gulp.series(reset, mainTasks);
+
 // Выполнение сценариев по умолчанию
 gulp.task('default', dev);
+
+gulp.task('prod', prod);
 
 gulp.task('copy', copy);
 gulp.task('reset', reset);
