@@ -1,4 +1,3 @@
-import webpack from "webpack-stream";
 import concat from "gulp-concat";
 import terser from "gulp-terser";
 import sourcemaps from 'gulp-sourcemaps';
